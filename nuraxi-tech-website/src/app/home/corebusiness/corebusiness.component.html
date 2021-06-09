@@ -1,0 +1,187 @@
+<div class="accordion-container">
+    <!-- <div class="example-action-buttons">
+        <button mat-button (click)="accordion.openAll()">Mostra tutto</button>
+        <button mat-button (click)="accordion.closeAll()">Nascondi tutto</button>
+      </div>     -->
+    <mat-accordion>
+        <mat-expansion-panel 
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Indicatori
+            </mat-panel-title>
+            <mat-panel-description *ngIf="!panelOpenState">
+              Statistiche ed indicatori generali
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-grid-list cols="2" rowHeight="1:1">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <!-- <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     Indicatore Fear And Greed
+                  </mat-card-title>
+                </mat-card-header> -->
+                <img mat-card-imag class="center" src="https://alternative.me/crypto/fear-and-greed-index.png" alt="Indice Crypto Fear & Greed" />                
+                <mat-card-content class="dashboard-card-content">
+                  <p style="text-align: center;">Indicatore Fear and Greed.</p>
+                  <p>Analizza il sentimento del mercato crypto, fornendo un valore tra 0 e 100 che rappresentano i due
+                    estremi tra Estrema Paura (Extreme Fear) e Estrema Avidità (Extreme Greed).
+                  </p>
+                </mat-card-content>
+              </mat-card>           
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-card class="dashboard-card">
+                  <mat-card-header>
+                    <!-- <mat-card-title>
+                        tradingview
+                    </mat-card-title> -->
+                  </mat-card-header>
+                  <mat-card-content class="dashboard-card-content">
+
+                    <div>
+                      <!-- TradingView Widget BEGIN -->
+                      <div class="tradingview-widget-container">
+                        <div class="tradingview-widget-container__widget"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BTCUSDT/technicals/" rel="noopener" target="_blank"><span class="blue-text">Analisi tecnica su BTCUSDT</span></a> da TradingView</div>
+
+                    </div>
+                    <!-- TradingView Widget END -->                      
+                    </div>
+
+                  </mat-card-content>
+                </mat-card>           
+              </mat-grid-tile>            
+          </mat-grid-list>
+        <!-- <p>This is the primary content of the panel.</p> -->
+        </mat-expansion-panel>
+
+        <mat-expansion-panel 
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Exchanges
+            </mat-panel-title>
+            <mat-panel-description *ngIf="!panelOpenState">
+              Piattaforme di scambio
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     Binance
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://www.binance.com/en/register?ref=C0P3DKJ8" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/binance.jpg" alt="Binance" />                
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     Kraken
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://www.kraken.com/" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/kraken.jpg" alt="kraken" />                
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     FTX
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://ftx.com/#a=14098700" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/ftx.png" alt="FTX" />                
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                    Bitstamp
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://www.bitstamp.net/ref/r99Pp9WwDMiZcVDH/" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/bitstamp.jpg" alt="Bitstamp" />
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+          </mat-grid-list>
+        </mat-expansion-panel>
+        
+        <mat-expansion-panel 
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              CeFi
+            </mat-panel-title>
+            <mat-panel-description *ngIf="!panelOpenState">
+              Piattaforme di Finanza Centralizzate
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     Celsius Network
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://celsiusnetwork.app.link/10923570d6" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/celsius.png" alt="Celsius Network" />                
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     Nexo
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://platform.nexo.io" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/nexo.png" alt="Nexo" />                
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     BlockFI
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://blockfi.com/?ref=0dbbb540" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/blockfi.png" alt="BlockFI" />                
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                    Crypto.com
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="https://crypto.com/app/yyst3h7k6t" target="_blank">
+                  <img mat-card-imag class="center" src="/assets/crypto-com.jpg" alt="Crypto.com" />
+                </a>
+              </mat-card>           
+            </mat-grid-tile>         
+          </mat-grid-list>
+        </mat-expansion-panel>          
+      </mat-accordion>
+</div>
