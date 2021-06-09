@@ -20,7 +20,10 @@ import { CorebusinessComponent } from './home/corebusiness/corebusiness.componen
 import { InstitutionalComponent } from './home/institutional/institutional.component';
 import { NftComponent } from './home/nft/nft.component';
 import { ContractsComponent } from './home/contracts/contracts.component';
-import {MatExpansionModule} from '@angular/material/expansion'
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs'; 
+import { MatBadgeModule } from '@angular/material/badge'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +48,9 @@ import {MatExpansionModule} from '@angular/material/expansion'
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule,
+    MatBadgeModule
     
   ],
   providers: [
