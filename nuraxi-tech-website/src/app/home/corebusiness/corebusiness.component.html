@@ -6,13 +6,13 @@
     <mat-accordion>
         <!-- Exchanges -->
         <mat-expansion-panel 
-        (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false">
+        (opened)="exchangesPanelOpenState = true"
+        (closed)="exchangesPanelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
               Exchanges
             </mat-panel-title>
-            <mat-panel-description *ngIf="!panelOpenState">
+            <mat-panel-description *ngIf="!exchangesPanelOpenState">
               Piattaforme di scambio
             </mat-panel-description>
           </mat-expansion-panel-header>
@@ -34,13 +34,13 @@
 
         <!-- CeFi -->
         <mat-expansion-panel 
-        (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false">
+        (opened)="ceFiPanelOpenState = true"
+        (closed)="ceFiPanelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
               CeFi
             </mat-panel-title>
-            <mat-panel-description *ngIf="!panelOpenState">
+            <mat-panel-description *ngIf="!ceFiPanelOpenState">
               Piattaforme di Finanza Centralizzate
             </mat-panel-description>
           </mat-expansion-panel-header>
@@ -62,13 +62,13 @@
         
         <!-- DeFi -->
         <mat-expansion-panel 
-        (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false">
+        (opened)="deFiPanelOpenState = true"
+        (closed)="deFiPanelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
               DeFi
             </mat-panel-title>
-            <mat-panel-description *ngIf="!panelOpenState">
+            <mat-panel-description *ngIf="!deFiPanelOpenState">
               Piattaforme di Finanza Decentralizzata
             </mat-panel-description>
           </mat-expansion-panel-header>
@@ -91,13 +91,13 @@
         
         <!-- indicatori -->
         <mat-expansion-panel 
-        (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false">
+        (opened)="indicatorPanelOpenState = true"
+        (closed)="indicatorPanelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
               Indicatori
             </mat-panel-title>
-            <mat-panel-description *ngIf="!panelOpenState">
+            <mat-panel-description *ngIf="!indicatorPanelOpenState">
               Statistiche ed indicatori generali
             </mat-panel-description>
           </mat-expansion-panel-header>

@@ -6,11 +6,16 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-corebusiness',
   templateUrl: './corebusiness.component.html',
-  styleUrls: ['./corebusiness.component.less']
+  styleUrls: ['./corebusiness.component.scss']
 })
 export class CorebusinessComponent implements OnInit {
   @ViewChild(MatAccordion) accordion!: MatAccordion;
-  panelOpenState: boolean = false;
+
+  /* stato dei pannelli */
+  exchangesPanelOpenState: boolean = false;
+  ceFiPanelOpenState: boolean = false;
+  deFiPanelOpenState: boolean = false;
+  indicatorPanelOpenState: boolean = false;
 
   exchangeCards: Array<any> = [
     { title: "Binance", href: "https://www.binance.com/en/register?ref=C0P3DKJ8", img: "/assets/binance.jpg", alt: "Binance" },

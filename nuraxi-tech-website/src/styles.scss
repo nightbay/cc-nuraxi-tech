@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;  }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Only import this one time in your project
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* ======== Angular material custom themes ======== */ 
+$my-custom-primary: mat-palette($mat-purple);
+$my-custom-accent: mat-palette($mat-purple, 100, #b720fd, A100);
+$my-custom-warn: mat-palette($mat-lime);
+
+$mat-dark-theme-background: map-merge($mat-dark-theme-background, (
+   app-bar: #b720fd, // Change color to whatever you want.
+   background: #b720fd // Change color to whatever you want. 
+));
+
+$my-custom-theme: mat-dark-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
+
+@include angular-material-theme($my-custom-theme);

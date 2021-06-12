@@ -1,1 +1,36 @@
-<p>nft works!</p>
+<div class="accordion-container">
+    <mat-accordion>
+        <!-- nft -->
+        <mat-expansion-panel 
+        (opened)="panelOpenState = true"
+        (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Marketplaces
+            </mat-panel-title>
+            <mat-panel-description *ngIf="!panelOpenState">
+              Piattaforme NFT
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-grid-list cols="4" rowHeight="1:1">
+            <mat-grid-tile [colspan]="1" [rowspan]="1" *ngFor="let card of nftCards">
+              <mat-card class="dashboard-card">
+                <mat-card-header class="mat-card-header-text">
+                  <mat-card-title> 
+                     {{card.title}}
+                  </mat-card-title>
+                </mat-card-header>
+                <a href="{{card.href}}" target="_blank">
+                  <img mat-card-imag class="center" src="{{card.img}}" alt="{{card.alt}}" />                
+                </a>
+              </mat-card>           
+            </mat-grid-tile>                  
+          </mat-grid-list>          
+        </mat-expansion-panel>
+
+
+        
+
+        
+      </mat-accordion>
+</div>
